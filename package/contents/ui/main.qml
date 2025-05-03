@@ -61,22 +61,22 @@ PlasmoidItem {
 		readonly property bool showOutline: plasmoid.configuration.showOutline
 
 		readonly property var ansiColors: ({
-			30: plasmoid.configuration.textc1base, // Black
-			31: plasmoid.configuration.textc2base, // Red
-			32: plasmoid.configuration.textc3base, // Green
-			33: plasmoid.configuration.textc4base, // Yellow
-			34: plasmoid.configuration.textc5base, // Blue
-			35: plasmoid.configuration.textc6base, // Magenta
-			36: plasmoid.configuration.textc7base, // Cyan
-			37: plasmoid.configuration.textc8base, // White
-			90: plasmoid.configuration.textc1bright, // Bright Black
-			91: plasmoid.configuration.textc2bright, // Bright Red
-			92: plasmoid.configuration.textc3bright, // Bright Green
-			93: plasmoid.configuration.textc4bright, // Bright Yellow
-			94: plasmoid.configuration.textc5bright, // Bright Blue
-			95: plasmoid.configuration.textc6bright, // Bright Magenta
-			96: plasmoid.configuration.textc7bright, // Bright Cyan
-			97: plasmoid.configuration.textc8bright, // Bright White
+			30: plasmoid.configuration.textc1base || '#000000', // Black
+			31: plasmoid.configuration.textc2base || '#aa0000', // Red
+			32: plasmoid.configuration.textc3base || '#00aa00', // Green
+			33: plasmoid.configuration.textc4base || '#aa6500', // Yellow
+			34: plasmoid.configuration.textc5base || '#0000aa', // Blue
+			35: plasmoid.configuration.textc6base || '#aa00aa', // Magenta
+			36: plasmoid.configuration.textc7base || '#00aaaa', // Cyan
+			37: plasmoid.configuration.textc8base || '#aaaaaa', // White
+			90: plasmoid.configuration.textc1bright || '#656565', // Bright Black
+			91: plasmoid.configuration.textc2bright || '#ff6565', // Bright Red
+			92: plasmoid.configuration.textc3bright || '#65ff65', // Bright Green
+			93: plasmoid.configuration.textc4bright || '#ffff65', // Bright Yellow
+			94: plasmoid.configuration.textc5bright || '#6565ff', // Bright Blue
+			95: plasmoid.configuration.textc6bright || '#ff65ff', // Bright Magenta
+			96: plasmoid.configuration.textc7bright || '#65ffff', // Bright Cyan
+			97: plasmoid.configuration.textc8bright || '#ffffff', // Bright White
 		})
 
 		onCommandChanged: widget.runCommand()
