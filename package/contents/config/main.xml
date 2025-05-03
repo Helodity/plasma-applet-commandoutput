@@ -53,6 +53,9 @@
 		<entry name="outlineColor" type="string">
 			<default></default>
 		</entry>
+		<entry name="spaceCharacter" type="string">
+			<default></default>
+		</entry>
 		<entry name="showOutline" type="bool">
 			<default>false</default>
 		</entry>

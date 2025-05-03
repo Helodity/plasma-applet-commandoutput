@@ -50,6 +50,11 @@ LibConfig.FormKCM {
 			defaultColor: PlasmaCore.Theme.backgroundColor
 		}
 	}
+	LibConfig.TextField {
+		Kirigami.FormData.label: i18n("Space Character:")
+		configKey: 'spaceCharacter'
+		defaultValue: '&nbsp;'
+	}
 
 
 	//-------------------------------------------------------

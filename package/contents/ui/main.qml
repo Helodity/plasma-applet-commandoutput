@@ -60,6 +60,7 @@ PlasmoidItem {
 		readonly property color textColor: plasmoid.configuration.textColor || Kirigami.Theme.textColor
 		readonly property color outlineColor: plasmoid.configuration.outlineColor || Kirigami.Theme.backgroundColor
 		readonly property bool showOutline: plasmoid.configuration.showOutline
+		readonly property string spaceCharacter: plasmoid.configuration.spaceCharacter
 
 		onCommandChanged: widget.runCommand()
 		onTooltipCommandChanged: widget.runCommand()
@@ -338,12 +339,11 @@ PlasmoidItem {
 			}
 
 			for(var j = rowChunks[curChunk.rowPos].actualLength; j < curChunk.colPos; j++) {
-				toAppend += '&nbsp;'
+				toAppend += config.spaceCharacter
 				rowChunks[curChunk.rowPos].actualLength++
 			}
-			var textToAdd = curChunk.text.replace(/ +/g, '&nbsp;')
 			toAppend += curChunk.text
-			rowChunks[curChunk.rowPos].actualLength+= curChunk.text.length
+			rowChunks[curChunk.rowPos].actualLength += curChunk.text.length
 
 			if(curChunk.fontColor != config.textColor) {
 				toAppend += '</font>'
