@@ -60,7 +60,7 @@ PlasmoidItem {
 		readonly property color textColor: plasmoid.configuration.textColor || Kirigami.Theme.textColor
 		readonly property color outlineColor: plasmoid.configuration.outlineColor || Kirigami.Theme.backgroundColor
 		readonly property bool showOutline: plasmoid.configuration.showOutline
-		readonly property string spaceCharacter: plasmoid.configuration.spaceCharacter
+		readonly property string spaceCharacter: plasmoid.configuration.spaceCharacter || ' '
 
 		onCommandChanged: widget.runCommand()
 		onTooltipCommandChanged: widget.runCommand()
@@ -524,9 +524,9 @@ PlasmoidItem {
 					return false
 				}
 			}
-			//elide: Text.ElideRight
+			elide: Text.ElideRight
 			wrapMode: isFixedWidth ? Text.Wrap : Text.NoWrap
-			lineHeight: 0.7
+			lineHeight: plasmoid.configuration.lineSpacing || 1
 		}
 
 	}

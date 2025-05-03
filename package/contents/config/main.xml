@@ -47,6 +47,9 @@
 			<!-- Text.AlignBottom: 64  -->
 			<default>128</default>
 		</entry>
+		<entry name="lineSpacing" type="double">
+			<default>1</default>
+		</entry>
 		<entry name="textColor" type="string">
 			<default></default>
 		</entry>
